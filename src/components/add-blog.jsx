@@ -18,7 +18,7 @@ const Addblog = () => {
     formData.append("image",image)
 
     try {
-      const res = await fetch("http://localhost:3001/admin/blog", {
+      const res = await fetch("https://ayurvedab.vercel.app/admin/blog", {
         method: "POST",
         credentials: "include",
         body: formData,
