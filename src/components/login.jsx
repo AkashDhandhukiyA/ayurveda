@@ -9,7 +9,7 @@ const Login = () => {
 
   const onLogin = async () => {
     console.log(email, password);
-    let result = await fetch("http://localhost:3001/login", {
+    let result = await fetch("https://ayurvedab.vercel.app/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
