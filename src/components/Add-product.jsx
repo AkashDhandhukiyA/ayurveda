@@ -34,7 +34,7 @@ const AddProduct = () => {
     if (image) formData.append("image", image);
 
     try {
-      const response = await fetch("http://localhost:3001/admin/Add-Product", {
+      const response = await fetch("https://ayurvedab.vercel.app/admin/Add-Product", {
         method: "POST",
         body: formData, // ✅ No headers, browser sets them automatically
       });
