@@ -13,7 +13,7 @@ const UpdateBlog = () => {
     image: null,
   });
   useEffect(() => {
-    fetch(`http://localhost:3001/admin/Blog/${id}`)
+    fetch(`https://ayurvedab.vercel.app/admin/Blog/${id}`)
       .then((res) => res.json())
       .then((data) => {
         const B = data.blog;
@@ -23,7 +23,7 @@ const UpdateBlog = () => {
           description: B.description,
           image: null,
         });
-        setPreview(`http://localhost:3001/uploads/${B.image}`);
+        setPreview(`https://ayurvedab.vercel.app/uploads/${B.image}`);
       });
   }, [id]);
   //handlechange
@@ -47,7 +47,7 @@ const UpdateBlog = () => {
     if (From.image) {
       fd.append("image", From.image);
     }
-    const res = await fetch(`http://localhost:3001/admin/updateblog/${id}`, {
+    const res = await fetch(`https://ayurvedab.vercel.app/admin/updateblog/${id}`, {
       method: "PUT",
       body: fd,
     });
