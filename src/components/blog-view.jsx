@@ -14,7 +14,7 @@ const BlogViews = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await fetch(`http://localhost:3001/blog/${id}`);
+        const response = await fetch(`https://ayurvedab.vercel.app/blog/${id}`);
         
         if (!response.ok) {
           throw new Error('Failed to fetch blog data');
@@ -92,7 +92,7 @@ const BlogViews = () => {
           {blogData.image ? (
             <div className="blog-image-container">
               <img
-                src={`http://localhost:3001/uploads/${blogData.image}`}
+                src={`https://ayurvedab.vercel.app/uploads/${blogData.image}`}
                 alt={blogData.name || "Blog image"}
                 className="blog-main-image"
                 onError={(e) => {
