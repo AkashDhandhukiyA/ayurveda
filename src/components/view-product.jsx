@@ -14,7 +14,7 @@ const ViewProduct = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:3001/viewProduct/${id}`)
+    fetch(`https://ayurvedab.vercel.app/viewProduct/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.product);
@@ -34,7 +34,7 @@ const ViewProduct = () => {
 
   const handleAddToFavorite = async () => {
     try {
-      const res = await fetch("http://localhost:3001/favourites", {
+      const res = await fetch("https://ayurvedab.vercel.app/favourites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -62,7 +62,7 @@ const ViewProduct = () => {
 
   const handleAddToBag = async () => {
     try {
-      const res = await fetch("http://localhost:3001/bag", {
+      const res = await fetch("https://ayurvedab.vercel.app/bag", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -126,7 +126,7 @@ const ViewProduct = () => {
         {/* Left Side - Product Image */}
         <div className="product-image-section">
           <img
-            src={`http://localhost:3001/${product.image}`}
+            src={`https://ayurvedab.vercel.app/${product.image}`}
             alt={product.name}
             className="product-main-image"
             onError={(e) => {
