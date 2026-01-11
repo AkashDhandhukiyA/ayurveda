@@ -111,7 +111,7 @@ const Product = () => {
 
                 <div className="product-img">
                   <img
-                    src={`http://localhost:3001/${p.image}`}
+                    src={`https://ayurvedab.vercel.app/${p.image}`}
                     alt={p.name}
                     loading="lazy"
                     onError={(e) => {
