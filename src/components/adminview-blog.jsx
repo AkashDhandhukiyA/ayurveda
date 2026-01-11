@@ -16,7 +16,7 @@ const AdminviewBlog = () => {
 
   const fetchBlogs = async () => {
     try {
-      const response = await fetch("http://localhost:3001/blog");
+      const response = await fetch("https://ayurvedab.vercel.app/blog");
       if (!response.ok) throw new Error("Failed to fetch blogs");
       const data = await response.json();
       setBlogData(data.BlogData || []);
@@ -28,7 +28,7 @@ const AdminviewBlog = () => {
   };
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3001/admin/blogdelete/${id}`, {
+      const res = await fetch(`https://ayurvedab.vercel.app/admin/blogdelete/${id}`, {
         method: "DELETE",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -86,7 +86,7 @@ const AdminviewBlog = () => {
         blogData.map((blog) => (
           <div className="blog-card" key={blog._id}>
             <img
-              src={`http://localhost:3001/uploads/${blog.image}`}
+              src={`https://ayurvedab.vercel.app/uploads/${blog.image}`}
               alt={blog.name}
             />
 
