@@ -1,0 +1,294 @@
+
+/* login page css */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.login-container {
+  background: #fff;
+  padding: 45px 55px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+
+.login-title {
+  font-size: 2rem;
+  color: #4f46e5;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+label {
+  display: block;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.3);
+  outline: none;
+}
+
+.login-btn {
+  background: #4f46e5;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #4338ca;
+  transform: translateY(-2px);
+}
+
+.signup-text {
+  margin-top: 15px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.signup-text a {
+  color: #4f46e5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 30px 25px;
+  }
+
+  .login-title {
+    font-size: 1.6rem;
+  }
+}
+/* //Addproduct css */
+/* =============== PAGE CONTAINER =============== */
+.product-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15px;
+}
+
+/* =============== FORM CONTAINER =============== */
+.product-container {
+  background: #fff;
+  width: 100%;
+  max-width: 700px;
+  padding: 40px 45px;
+  border-radius: 16px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* =============== TITLES =============== */
+.product-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.product-subtitle {
+  text-align: center;
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* =============== FORM STYLING =============== */
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Row with two inputs side by side */
+.product-row {
+  display: flex;
+  gap: 20px;
+}
+
+.product-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.product-group.half {
+  flex: 1;
+}
+
+.product-group label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.product-group input,
+.product-group textarea {
+  padding: 12px 14px;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.product-group input:focus,
+.product-group textarea:focus {
+  border-color: #4b7bec;
+  box-shadow: 0 0 5px rgba(75, 123, 236, 0.3);
+}
+
+/* =============== BUTTON =============== */
+.product-btn {
+  background-color: #4b7bec;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.product-btn:hover {
+  background-color: #3867d6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(75, 123, 236, 0.3);
+}
+
+/* =============== RESPONSIVE DESIGN =============== */
+@media (max-width: 600px) {
+  .product-row {
+    flex-direction: column;
+  }
+
+  .product-container {
+    padding: 30px 25px;
+  }
+
+  .product-title {
+    font-size: 24px;
+  }
+}
+
+/* =============== ANIMATION =============== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* //massage-box */
+.MASSAGE-BOX {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Success (Green) */
+.MASSAGE-BOX.success {
+  background-color: #d1f7d1;
+  color: #166534;
+  border: 1px solid #22c55e;
+}
+
+/* ❌ Error (Red) */
+.MASSAGE-BOX.error {
+  background-color: #fddddd;
+  color: #991b1b;
+  border: 1px solid #ef4444;
+}
+
+/* Optional: Smooth fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.MASSAGE-BOX {
+  animation: fadeIn 0.4s ease forwards;
+}
+

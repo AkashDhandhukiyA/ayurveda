@@ -1,0 +1,99 @@
+/* ===============================
+   BLOG CARD
+================================ */
+.blog-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.blog-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ===============================
+   IMAGE
+================================ */
+.blog-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ===============================
+   CONTENT
+================================ */
+.blog-content {
+  padding: 15px;
+}
+
+.blog-content h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.blog-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.blog-desc {
+  font-size: 13px;
+  color: #777;
+}
+
+/* ===============================
+   ICON
+================================ */
+.read-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  color: #007bff;
+}
+
+/* ===============================
+   ADMIN BUTTONS
+================================ */
+.admin-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-top: 1px solid #eee;
+  background: #fafafa;
+}
+
+.admin-actions button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s;
+}
+
+.btn-update {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-update:hover {
+  background: #0056b3;
+}
+
+.btn-delete {
+  background: #dc3545;
+  color: #fff;
+}
+
+.btn-delete:hover {
+  background: #b52a37;
+}
