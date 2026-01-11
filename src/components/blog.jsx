@@ -14,7 +14,7 @@ const Blog = () => {
     const fetchBlogs = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:3001/blog");
+        const response = await fetch("https://ayurvedab.vercel.app/blog");
         if (!response.ok) throw new Error("Failed to fetch blogs");
         const data = await response.json();
         setBlogData(data.BlogData || []);
@@ -74,7 +74,7 @@ const Blog = () => {
             >
               <div className="blog-image-wrapper">
                 <img
-                  src={`http://localhost:3001/uploads/${item.image}`}
+                  src={`https://ayurvedab.vercel.app/uploads/${item.image}`}
                   alt={item.name}
                   className="blog-round-img"
                   onError={(e) => {
@@ -133,7 +133,7 @@ const Blog = () => {
                 >
                   <div className="sidebar-image-wrapper">
                     <img
-                      src={`http://localhost:3001/uploads/${item.image}`}
+                      src={`https://ayurvedab.vercel.app/uploads/${item.image}`}
                       alt={item.name}
                       className="sidebar-img"
                       onError={(e) => {
