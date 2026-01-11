@@ -101,7 +101,7 @@ const Bag = () => {
   const [removingId, setRemovingId] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/bag", {
+    fetch("https://ayurvedab.vercel.app/bag", {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -118,7 +118,7 @@ const Bag = () => {
   const removeBagProduct = async (id) => {
     try {
       setRemovingId(id);
-      const res = await fetch("http://localhost:3001/bag/delete", {
+      const res = await fetch("https://ayurvedab.vercel.app/bag/delete", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -221,7 +221,7 @@ const Bag = () => {
                 >
                   <div className="item-image">
                     <img
-                      src={`http://localhost:3001/${item.image}`}
+                      src={`https://ayurvedab.vercel.app/${item.image}`}
                       alt={item.name}
                     />
                     {item.discount > 0 && (
