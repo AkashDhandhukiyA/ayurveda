@@ -11,7 +11,7 @@ const Header = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch("http://localhost:3001/check-auth", {
+        const res = await fetch("https://ayurvedab.vercel.app/check-auth", {
           method: "GET",
           credentials: "include",
         });
@@ -35,7 +35,7 @@ const Header = () => {
 
   const handleLogout = async () => {
     try {
-      const res = await fetch("http://localhost:3001/logout", {
+      const res = await fetch("https://ayurvedab.vercel.app/logout", {
         method: "POST",
         credentials: "include",
       });
