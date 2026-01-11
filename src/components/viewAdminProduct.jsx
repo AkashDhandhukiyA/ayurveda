@@ -8,7 +8,7 @@ const Viewadminproduct = () => {
   const [status, setstatus] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3001/product", {
+    fetch("https://ayurvedab.vercel.app/product", {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -19,7 +19,7 @@ const Viewadminproduct = () => {
 
   const handledeleteProduct = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3001/admin/delete/${id}`, {
+      const res = await fetch(`https://ayurvedab.vercel.app/admin/delete/${id}`, {
         method: "DELETE",
         credentials: "include",
         headers:{"Content-Type":"application/json"},
@@ -62,7 +62,7 @@ const Viewadminproduct = () => {
               <div key={p._id} className="product-card">
                 <div className="product-img">
                   <img
-                    src={`http://localhost:3001/${p.image}`}
+                    src={`https://ayurvedab.vercel.app/${p.image}`}
                     alt={p.name}
                     loading="lazy"
                   />
