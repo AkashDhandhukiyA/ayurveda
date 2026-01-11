@@ -21,7 +21,7 @@ const UpdateProduct = () => {
 
   // Fetch product
   useEffect(() => {
-    fetch(`http://localhost:3001/admin/viewProduct/${id}`)
+    fetch(`https://ayurvedab.vercel.app/admin/viewProduct/${id}`)
       .then((res) => res.json())
       .then((data) => {
         const p = data.product;
@@ -40,7 +40,7 @@ const UpdateProduct = () => {
           image: null,
         });
 
-        setPreview(`http://localhost:3001/uploads/${p.image}`);
+        setPreview(`https://ayurvedab.vercel.app/uploads/${p.image}`);
       });
   }, [id]);
 
@@ -87,7 +87,7 @@ const UpdateProduct = () => {
       fd.append("image", form.image);
     }
 
-    const res = await fetch(`http://localhost:3001/admin/updateproduct/${id}`, {
+    const res = await fetch(`https://ayurvedab.vercel.app/admin/updateproduct/${id}`, {
       method: "PUT",
       body: fd,
     });
