@@ -13,7 +13,7 @@ const Product = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:3001/product")
+    fetch("https://ayurvedab.vercel.app/product")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data.product);
