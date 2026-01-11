@@ -23,7 +23,7 @@ const Signup = () => {
 
     setErrors([]);
 
-    let result = await fetch("http://localhost:3001/register", {
+    let result = await fetch("https://ayurvedab.vercel.app/register", {
       method: "POST",
       body: JSON.stringify({
         firstname,
