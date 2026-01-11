@@ -15,7 +15,7 @@ const Wishlist = () => {
 
   const fetchWishlist = () => {
     setLoading(true);
-    fetch("http://localhost:3001/favourites", {
+    fetch("https://ayurvedab.vercel.app/favourites", {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -31,7 +31,7 @@ const Wishlist = () => {
 
   const removeFromWishlist = async (id, name) => {
     try {
-      const res = await fetch("http://localhost:3001/favourites/delete", {
+      const res = await fetch("https://ayurvedab.vercel.app/favourites/delete", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -54,7 +54,7 @@ const Wishlist = () => {
 
   const addToCart = async (product) => {
     try {
-      const res = await fetch("http://localhost:3001/bag", {
+      const res = await fetch("https://ayurvedab.vercel.app/bag", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -179,7 +179,7 @@ const Wishlist = () => {
                   onClick={() => navigate(`/viewProduct/${item._id}`)}
                 >
                   <img
-                    src={`http://localhost:3001/${item.image}`}
+                    src={`https://ayurvedab.vercel.app/${item.image}`}
                     alt={item.name}
                     className="product-image"
                     onError={(e) => {
