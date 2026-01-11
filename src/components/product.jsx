@@ -32,7 +32,7 @@ const Product = () => {
     setFavorite((prev) => ({ ...prev, [id]: !prev[id] }));
 
     try {
-      const res = await fetch("http://localhost:3001/favourites", {
+      const res = await fetch("https://ayurvedab.vercel.app/favourites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
