@@ -14,7 +14,7 @@ const ViewProduct = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://ayurvedab.vercel.app/${id}`)
+    fetch(`https://ayurvedab.vercel.app/viewProduct/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.product);
