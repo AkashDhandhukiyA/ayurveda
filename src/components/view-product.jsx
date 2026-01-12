@@ -14,7 +14,7 @@ const ViewProduct = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://ayurvedab.vercel.app/viewProduct/${id}`)
+    fetch(`https://ayurvedab.vercel.app/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setProduct(data.product);
@@ -32,13 +32,13 @@ const ViewProduct = () => {
       });
   }, [id]);
 
-  const handleAddToFavorite = async () => {
+  const handleAddToFavorite = async (id) => {
     try {
       const res = await fetch("https://ayurvedab.vercel.app/favourites", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
-        body: JSON.stringify({ id: product._id }),
+        body: JSON.stringify({ id:id }),
       });
 
       const data = await res.json();
@@ -60,13 +60,13 @@ const ViewProduct = () => {
     setTimeout(() => setNotification(""), 2000);
   };
 
-  const handleAddToBag = async () => {
+  const handleAddToBag = async (id) => {
     try {
       const res = await fetch("https://ayurvedab.vercel.app/bag", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: product._id }),
+        body: JSON.stringify({ id:id }),
       });
       
       const data = await res.json();
@@ -194,7 +194,7 @@ const ViewProduct = () => {
           <div className="action-buttons-group">
             <button 
               className="secondary-action-btn favorite-btn"
-              onClick={handleAddToFavorite}
+              onClick={()=>handleAddToFavorite(product._id)}
               title="Add to Favorites"
               aria-label="Add to favorites"
             >
@@ -203,7 +203,7 @@ const ViewProduct = () => {
             
             <button 
               className="secondary-action-btn bag-btn"
-              onClick={handleAddToBag}
+              onClick={ ()=>handleAddToBag( product._id)}
               title="Add to Shopping Bag"
               aria-label="Add to shopping bag"
             >
