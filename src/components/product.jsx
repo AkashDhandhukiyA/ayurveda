@@ -108,10 +108,12 @@ const Product = () => {
                 >
                   <FaHeart className={favorite[p._id] ? "heart active" : "heart"} />
                 </div>
-
-          <div className="product-img">
+<div className="product-img">
   <img
-    src={`https://ayurvedab.vercel.app/uploads/${p.image?.replace("uploads/", "")}`}
+    src={`https://ayurvedab.vercel.app/uploads/${p.image
+      ?.replace(/\\/g, "/")   // convert \ to /
+      .split("/")
+      .pop()}`}               // get only filename
     alt={p.name}
     loading="lazy"
     onError={(e) => {
