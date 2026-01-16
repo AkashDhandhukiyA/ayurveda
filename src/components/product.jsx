@@ -109,16 +109,19 @@ const Product = () => {
                   <FaHeart className={favorite[p._id] ? "heart active" : "heart"} />
                 </div>
 
-                <div className="product-img">
-                  <img
-                    src={`https://ayurvedab.vercel.app/uploads//${p.image}`}
-                    alt={p.name}
-                    loading="lazy"
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/300x280/4f46e5/ffffff?text=Product+Image';
-                    }}
-                  />
-                </div>
+          <div className="product-img">
+  <img
+    src={`https://ayurvedab.vercel.app/uploads/${p.image?.replace("uploads/", "")}`}
+    alt={p.name}
+    loading="lazy"
+    onError={(e) => {
+      e.target.onerror = null;
+      e.target.src =
+        "https://via.placeholder.com/300x280/4f46e5/ffffff?text=Product+Image";
+    }}
+  />
+</div>
+
 
                 <div className="product-info">
                   <h2>{p.name}</h2>
